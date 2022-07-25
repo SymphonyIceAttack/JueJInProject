@@ -7,6 +7,8 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@vueuse/core": "^8.9.4",
+    "@vueuse/nuxt": "^8.9.4",
     "less": "^4.1.3",
     "less-loader": "7.0.0",
     "nuxt": "3.0.0-rc.6",
