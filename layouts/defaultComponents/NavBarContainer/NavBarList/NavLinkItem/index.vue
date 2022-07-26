@@ -1,10 +1,15 @@
 <script lang="ts" setup>
-import { LinkItemPathTypeOrigin,LinkItemTypeNameOrigin } from "@/ProjectTypes/RouterType";
+import {
+    LinkItemPathTypeOrigin,
+    LinkItemTypeNameOrigin,
+} from "@/ProjectTypes/RouterType";
 const props = defineProps<{
     name: LinkItemTypeNameOrigin;
     to: LinkItemPathTypeOrigin;
     isOuter: boolean;
 }>();
+
+const currentPathArray = useDynamicRouterArr();
 </script>
 
 <template>
@@ -13,6 +18,7 @@ const props = defineProps<{
             v-if="!isOuter"
             exactActiveClass="MYexactActiveClass"
             :to="to"
+            @click="currentPathArray = useReducerDynamic(to)"
             >{{ name }}</NuxtLink
         >
         <a v-else :href="to">{{ name }}</a>
@@ -37,9 +43,8 @@ const props = defineProps<{
         }
     }
     a.MYexactActiveClass {
-    color: #1e80ff;
-    font-weight: 500;
+        color: #1e80ff;
+        font-weight: 500;
+    }
 }
-}
-
 </style>

@@ -2,18 +2,8 @@
 import type { LinkItemPathTypeOrigin } from "~~/ProjectTypes/RouterType";
 import { nanoid } from "nanoid";
 const isNavBarHide = useNavBarHide();
+const currentPathArray = useDynamicRouterArr();
 
-const { currentRoute } = useRouter();
-const currentPathArray = ref(selectDynamicRouterArr("/"));
-
-watch(
-    () => currentRoute.value.fullPath,
-    (currentPath) => {
-        currentPathArray.value = selectDynamicRouterArr(
-            currentPath as LinkItemPathTypeOrigin
-        );
-    }
-);
 </script>
 
 <template>

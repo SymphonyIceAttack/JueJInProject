@@ -2,7 +2,7 @@ import type {
     LinkItemPathTypeOrigin,
     SubSet,
 } from "~~/ProjectTypes/RouterType";
-
+import { Ref } from "vue";
 const SubsetArrayIndex: SubSet[] = [
     {
         name: "综合",
@@ -110,11 +110,12 @@ const SubsetArrayNews: SubSet[] = [
 
 const SubsetArrayEvents: SubSet[] = [
     {
-        path: "events/all",
+        path: "/events/all",
         name: "全部",
     },
 ];
-export default (path: LinkItemPathTypeOrigin): SubSet[] => {
+
+export const useReducerDynamic = (path: LinkItemPathTypeOrigin): SubSet[] => {
     switch (path) {
         case "/":
             return SubsetArrayIndex;
@@ -127,4 +128,13 @@ export default (path: LinkItemPathTypeOrigin): SubSet[] => {
         default:
             return [];
     }
+};
+
+export default (): Ref<SubSet[]> => {
+    const initRouterarray = useState(
+        "useDynamicRouterArr",
+        () => SubsetArrayIndex
+    );
+
+    return initRouterarray;
 };

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { nanoid } from "nanoid";
-
 import NavLinkItem from "./NavLinkItem/index.vue";
+
 const LinkItem = useRouterArrayAll();
 </script>
 
