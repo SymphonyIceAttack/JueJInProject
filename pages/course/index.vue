@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-    <div>我是首页</div>
+    <div>我是课程</div>
 </template>
 
 <style lang="less" scoped>

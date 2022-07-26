@@ -1,16 +1,21 @@
 <script lang="ts" setup>
-import { AddressType } from "@/ProjectTypes/AddressType";
+import { LinkItemPathTypeOrigin,LinkItemTypeNameOrigin } from "@/ProjectTypes/RouterType";
 const props = defineProps<{
-    name: string;
-    to: AddressType;
+    name: LinkItemTypeNameOrigin;
+    to: LinkItemPathTypeOrigin;
+    isOuter: boolean;
 }>();
 </script>
 
 <template>
     <li class="LinkItem">
-        <NuxtLink exactActiveClass="MYexactActiveClass" :to="to">{{
-            name
-        }}</NuxtLink>
+        <NuxtLink
+            v-if="!isOuter"
+            exactActiveClass="MYexactActiveClass"
+            :to="to"
+            >{{ name }}</NuxtLink
+        >
+        <a v-else :href="to">{{ name }}</a>
     </li>
 </template>
 <style lang="less" scoped>
@@ -31,9 +36,10 @@ const props = defineProps<{
             border-bottom: 2px blue solid;
         }
     }
-}
-.MYexactActiveClass {
+    a.MYexactActiveClass {
     color: #1e80ff;
     font-weight: 500;
 }
+}
+
 </style>

@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 import { useWindowScroll } from "@vueuse/core";
 const { x, y } = useWindowScroll();
-const isNavBarHide = computed(() => y.value > 100);
+const isNavBarHide = useNavBarHide();
+watch(y, () => {
+   isNavBarHide.value = Boolean(y.value > 100);
+});
+
 </script>
 
 <template>
@@ -33,6 +37,7 @@ const isNavBarHide = computed(() => y.value > 100);
     display: flex;
     align-items: center;
     transition: all 0.3s;
+    z-index: 100;
     .navbar {
         height: 100%;
         flex: 1 0 auto;
