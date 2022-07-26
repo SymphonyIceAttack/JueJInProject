@@ -45,6 +45,7 @@ watch(
         box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
         transition: all 0.2s;
         background: white;
+        top: 5.1rem;
         .NavBarComponentsContent {
             max-width: 960px;
             margin: 0 auto;
@@ -62,15 +63,18 @@ watch(
                 height: 100%;
                 padding: 0 1rem;
                 font-size: 1.16rem;
+                &:hover {
+                    color: #1e80ff;
+                }
             }
             a.MYexactActiveClass {
                 color: #1e80ff;
                 font-weight: 500;
             }
         }
-        .NavBarMoveTop {
-            transform: translateY(-5rem);
-        }
+    }
+    nav.NavBarMoveTop {
+        transform: translateY(-5rem);
     }
 }
 </style>
