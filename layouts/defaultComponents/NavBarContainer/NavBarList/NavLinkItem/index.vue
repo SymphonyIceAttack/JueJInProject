@@ -10,15 +10,22 @@ const props = defineProps<{
 }>();
 
 const currentPathArray = useDynamicRouterArr();
+
+const LinkActiveClass = useWhichActiveClass();
+
+function ClickItem() {
+    currentPathArray.value = useReducerDynamic(props.to);
+    LinkActiveClass.value = props.to;
+}
 </script>
 
 <template>
     <li class="LinkItem">
         <NuxtLink
             v-if="!isOuter"
-            exactActiveClass="MYexactActiveClass"
             :to="to"
-            @click="currentPathArray = useReducerDynamic(to)"
+            @click="ClickItem()"
+            :class="{ LinkActiveClass: LinkActiveClass == to }"
             >{{ name }}</NuxtLink
         >
         <a v-else :href="to">{{ name }}</a>
@@ -42,7 +49,11 @@ const currentPathArray = useDynamicRouterArr();
             border-bottom: 2px blue solid;
         }
     }
-    a.MYexactActiveClass {
+    a.router-link-active {
+        color: #1e80ff;
+        font-weight: 500;
+    }
+    .LinkActiveClass {
         color: #1e80ff;
         font-weight: 500;
     }

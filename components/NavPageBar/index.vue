@@ -15,6 +15,7 @@ const currentPathArray = useDynamicRouterArr();
                     key="nanoid()"
                     :to="item.path"
                     exact-active-class="MYexactActiveClass"
+                    exact
                 >
                     {{ item.name }}
                 </NuxtLink>
