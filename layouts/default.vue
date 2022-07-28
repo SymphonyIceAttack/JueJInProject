@@ -32,6 +32,7 @@ const isFoucsActiveWrap = () => isFoucsActive;
             </RightSideBar>
         </NavBarContainer>
         <NavPageBar />
+        <!--    路由出口 -->
         <NuxtPage />
     </div>
 </template>
