@@ -38,10 +38,11 @@ const getArrayIndex = (arr: DirectoryItem[], id: string) => {
     }
     return -1;
 };
-
+let timer: any = null;
 const GoBackScroll = (TopLength: number) => {
     isTransition.value = true;
-    setTimeout(() => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
         isTransition.value = false;
     }, 1200);
     TopLengthScroll.value =
@@ -52,6 +53,7 @@ onUnmounted(() => {
     DirceortyStore.$reset();
 });
 onMounted(() => {
+    document.documentElement.scrollTop = 0;
     recentId.value = DirceortyStore.value[0].id;
 });
 watch([x, y], () => {
