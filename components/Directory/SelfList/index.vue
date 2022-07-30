@@ -14,7 +14,7 @@ const recentId = ref<string>("");
 const TopLengthScroll = ref<number>(0);
 const TopLengthScrolloutput = useTransition(TopLengthScroll, {
     duration: 1000,
-    transition: TransitionPresets.easeInOutCubic,
+    transition: TransitionPresets.easeInQuad,
 });
 const compare = (obj1: DirectoryItem, obj2: DirectoryItem) => {
     const val1 = obj1.TopLength;
@@ -63,7 +63,7 @@ watch(recentId, (newValue, oldValue) => {
 
     const oldIndex = getArrayIndex(DirceortyStore.value, oldValue);
 
-    UlBoxel.value!.scrollTop += 55 * (newIndex - oldIndex);
+    UlBoxel.value!.scrollTop += 50 * (newIndex - oldIndex);
 });
 
 watch(TopLengthScrolloutput, (output) => {
