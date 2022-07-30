@@ -1,12 +1,21 @@
 <script setup lang="ts">
 import { useDirceortyStore } from "@/Piniastore/DirceortyStore";
 import type { DirectoryItem } from "~~/ProjectTypes/DirectoryTypes";
-import { useWindowScroll } from "@vueuse/core";
+import {
+    useWindowScroll,
+    TransitionPresets,
+    useTransition,
+} from "@vueuse/core";
 const isNavBarHide = useNavBarHide();
 const DirceortyStore = useDirceortyStore();
 const { x, y } = useWindowScroll();
 const UlBoxel = ref<HTMLElement>();
 const recentId = ref<string>("");
+const TopLengthScroll = ref<number>(0);
+const TopLengthScrolloutput = useTransition(TopLengthScroll, {
+    duration: 1000,
+    transition: TransitionPresets.easeInOutCubic,
+});
 const compare = (obj1: DirectoryItem, obj2: DirectoryItem) => {
     const val1 = obj1.TopLength;
     const val2 = obj2.TopLength;
@@ -27,6 +36,10 @@ const getArrayIndex = (arr: DirectoryItem[], id: string) => {
         }
     }
     return -1;
+};
+
+const GoBackScroll = (TopLength: number) => {
+    TopLengthScroll.value = document.documentElement.scrollTop + TopLength;
 };
 
 onUnmounted(() => {
@@ -50,9 +63,11 @@ watch(recentId, (newValue, oldValue) => {
 
     const oldIndex = getArrayIndex(DirceortyStore.value, oldValue);
 
-    newIndex - oldIndex > 0
-        ? (UlBoxel.value!.scrollTop += 50)
-        : (UlBoxel.value!.scrollTop -= 50);
+    UlBoxel.value!.scrollTop += 50 * (newIndex - oldIndex);
+});
+
+watch(TopLengthScrolloutput, (output) => {
+    document.documentElement.scrollTop = output;
 });
 </script>
 
@@ -72,7 +87,9 @@ watch(recentId, (newValue, oldValue) => {
                         ActiveDirectory: recentId == item.id,
                     }"
                 >
-                    {{ item.content }}
+                    <div @click="GoBackScroll(item.TopLength)">
+                        {{ item.content }}
+                    </div>
                 </li>
             </ul>
         </div>
@@ -103,6 +120,7 @@ watch(recentId, (newValue, oldValue) => {
         border-top: 1.5px solid #333;
     }
     .DirectorySelfList {
+        margin-top: 1rem;
         background-color: white;
         transition: all 0.2s;
         ul {
@@ -110,15 +128,28 @@ watch(recentId, (newValue, oldValue) => {
             height: 500px;
             overflow: auto;
             li {
-                height: 50px;
-                line-height: 50px;
-                pointer-events: auto;
-                cursor: pointer;
-                position: relative;
-                z-index: 99;
+                height: 40px;
+                margin: 0;
+                padding-left: 2rem;
+                padding-right: 1rem;
+                font-size: 1.167rem;
+                font-weight: 400;
+                line-height: 40px;
+                color: #333;
+                list-style: none;
+                div {
+                    padding-left: 1rem;
+                    height: 100%;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: rgb(227, 230, 234);
+                    }
+                }
             }
             li.ActiveDirectory {
-                background-color: blue;
+                color: blue;
+                border-left: 2px solid blueviolet;
             }
         }
     }
