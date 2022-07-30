@@ -70,9 +70,9 @@
 .IndexPage {
     display: flex;
     justify-content: space-between;
-
+    height: 2500px;
     .Test {
-        height:400px;
+        height: 400px;
         background-color: yellowgreen;
     }
 }

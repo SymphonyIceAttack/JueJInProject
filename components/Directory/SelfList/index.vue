@@ -45,7 +45,7 @@ const GoBackScroll = (TopLength: number) => {
         isTransition.value = false;
     }, 1200);
     TopLengthScroll.value =
-        document.documentElement.scrollTop + TopLength - 500;
+        document.documentElement.scrollTop + TopLength - 100;
 };
 
 onUnmounted(() => {
