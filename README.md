@@ -27,4 +27,12 @@ yarn dev
 3. 在nuxt还有一个useState函数，该函数需要一个唯一的id和一个返回初始化数据的函数，返回一个全局的ref对象，所以对于单个不需要与其他变量联动的全局变量只需使用useState就足够了，一般都是用一个函数对useState进行封装返回 return useState("id",()=>initData) ,在setup中调用封装好的函数，当对其ref对象进行修改时，其他的与他相同id创建的ref也会发生修改
 (参考我的composables中的封装的函数)
 
+## 自定义组件使用说明components文件夹
+### components/Directory
+1. DirectoryOuterItem 是一个具有插槽的组件，插槽是为了更好的在开发侧提供自由程度这里写啥都行最终都会显示到页面上，有两个参数content为最终在目录中显示的内容，type则表示是大标题还是小标题( "origin" | "leaf")，这两个参数都和最终的展示效果无关
+2. DirectorySelfList 是一个目录展示列表用到时候直接在组件中使用就行了
+
+
+
+
 ## 目前还不急于开发页面，而是要讨论出具体开发哪些页面，实现哪些功能

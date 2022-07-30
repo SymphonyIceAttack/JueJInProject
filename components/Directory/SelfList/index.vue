@@ -101,7 +101,10 @@ watch(TopLengthScrolloutput, (output) => {
                         ActiveDirectory: recentId == item.id,
                     }"
                 >
-                    <div @click="GoBackScroll(item.TopLength)">
+                    <div
+                        @click="GoBackScroll(item.TopLength)"
+                        :class="{ leaf: item.type == 'leaf' }"
+                    >
                         {{ item.content }}
                     </div>
                 </li>
@@ -159,6 +162,9 @@ watch(TopLengthScrolloutput, (output) => {
                     &:hover {
                         background-color: rgb(227, 230, 234);
                     }
+                }
+                div.leaf {
+                    padding-left: 2rem;
                 }
             }
             li.ActiveDirectory {
