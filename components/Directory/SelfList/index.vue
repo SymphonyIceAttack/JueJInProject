@@ -63,7 +63,7 @@ watch(recentId, (newValue, oldValue) => {
 
     const oldIndex = getArrayIndex(DirceortyStore.value, oldValue);
 
-    UlBoxel.value!.scrollTop += 50 * (newIndex - oldIndex);
+    UlBoxel.value!.scrollTop += 55 * (newIndex - oldIndex);
 });
 
 watch(TopLengthScrolloutput, (output) => {
