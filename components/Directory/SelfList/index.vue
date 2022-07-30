@@ -12,6 +12,7 @@ const { x, y } = useWindowScroll();
 const UlBoxel = ref<HTMLElement>();
 const recentId = ref<string>("");
 const TopLengthScroll = ref<number>(0);
+const isTransition = ref(false);
 const TopLengthScrolloutput = useTransition(TopLengthScroll, {
     duration: 1000,
     transition: TransitionPresets.easeInQuad,
@@ -39,6 +40,10 @@ const getArrayIndex = (arr: DirectoryItem[], id: string) => {
 };
 
 const GoBackScroll = (TopLength: number) => {
+    isTransition.value = true;
+    setTimeout(() => {
+        isTransition.value = false;
+    }, 1000);
     TopLengthScroll.value = document.documentElement.scrollTop + TopLength;
 };
 
@@ -64,10 +69,16 @@ watch(recentId, (newValue, oldValue) => {
     const oldIndex = getArrayIndex(DirceortyStore.value, oldValue);
 
     UlBoxel.value!.scrollTop += 50 * (newIndex - oldIndex);
+    !isTransition.value
+        ? (TopLengthScroll.value =
+              document.documentElement.scrollTop +
+              DirceortyStore.value.find((item) => item.id == newValue)!
+                  .TopLength)
+        : null;
 });
 
 watch(TopLengthScrolloutput, (output) => {
-    document.documentElement.scrollTop = output;
+    isTransition.value ? (document.documentElement.scrollTop = output) : null;
 });
 </script>
 
