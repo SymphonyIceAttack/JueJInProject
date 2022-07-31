@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     alias: {
         "@navBarLayout": path.resolve(
             __dirname,
-            "layouts/defaultComponents/NavBarContainer"
+            "layoutsComponents/defaultComponents/NavBarContainer"
         ),
     },
     modules: [],
