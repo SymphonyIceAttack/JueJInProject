@@ -23,6 +23,7 @@
     "@vueuse/router": "^8.9.4",
     "autoprefixer": "^10.4.7",
     "less-plugin-autoprefix": "^2.0.0",
+    "nanoid": "^4.0.0",
     "postcss": "^8.4.14",
     "postcss-pxtorem": "^6.0.0"
   }

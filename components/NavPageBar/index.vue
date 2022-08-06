@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { LinkItemPathTypeOrigin } from "~~/ProjectTypes/RouterType";
 import { nanoid } from "nanoid";
 const isNavBarHide = useNavBarHide();
 const currentPathArray = useDynamicRouterArr();

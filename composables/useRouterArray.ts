@@ -6,7 +6,7 @@ import type {
 
 export const useRouterArrayAll = () => {
     return useState("RouterArray", (): LinkListType[] => [
-        { name: "首页", to: "/", isOuter: false, hasSubset: true },
+        { name: "首页", to: "/main", isOuter: false, hasSubset: true },
         { name: "沸点", to: "/pins", isOuter: false, hasSubset: false },
         { name: "课程", to: "/course", isOuter: false, hasSubset: true },
         { name: "直播", to: "/live", isOuter: false, hasSubset: false },

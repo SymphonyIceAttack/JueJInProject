@@ -22,7 +22,7 @@ const isFoucsActiveWrap = () => isFoucsActive;
         <NavBarContainer>
             <NavBarList />
             <RightSideBar>
-                <SearchAddItem>
+                <SearchAddItem :isHiddenWrap="isFoucsActiveWrap">
                     <SrearchBox :isFoucsActiveWrap="isFoucsActiveWrap" />
                     <GroupAdd :isHideWarp="isFoucsActiveWrap" />
                 </SearchAddItem>
@@ -33,12 +33,8 @@ const isFoucsActiveWrap = () => isFoucsActive;
         </NavBarContainer>
         <NavPageBar />
         <!--    路由出口 -->
-        <NuxtPage />
+        <slot />
     </div>
 </template>
 
-<style lang="less" scoped>
-
-
-
-</style>
+<style lang="less" scoped></style>

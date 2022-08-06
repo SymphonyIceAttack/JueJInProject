@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-    <NuxtLayout />
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
 </template>
 
 <style>
@@ -10,6 +12,7 @@
     padding: 0;
     list-style: none;
     direction: none;
+    height: 0px;
 }
 body {
     font-family: "Poppins", sans-serif;
@@ -25,18 +28,18 @@ a {
     text-decoration: none;
 }
 
-::-webkit-scrollbar{
-  width: 5px;
-  height: 5px;
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
 
-::-webkit-scrollbar-thumb{
-  border-radius: 1em;
-  background-color: rgba(50,50,50,.3);
+::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background-color: rgba(50, 50, 50, 0.3);
 }
 
-::-webkit-scrollbar-track{
-  border-radius: 1em;
-  background-color: rgba(50,50,50,.1);
+::-webkit-scrollbar-track {
+    border-radius: 1em;
+    background-color: rgba(50, 50, 50, 0.1);
 }
 </style>

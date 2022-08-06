@@ -7,7 +7,6 @@
                 src="https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/24127194d5b158d7eaf8f09a256c5d01.svg"
                 alt=""
             />
-            <div class="vip-words">会员</div>
         </div>
     </li>
 </template>

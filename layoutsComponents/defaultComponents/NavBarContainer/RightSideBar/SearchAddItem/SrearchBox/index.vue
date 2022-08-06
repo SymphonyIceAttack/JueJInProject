@@ -41,6 +41,7 @@ const isFoucsActive = props.isFoucsActiveWrap();
     }
     input {
         border: none;
+        height: 100%;
         width: calc(100% - 44px);
         padding: 0.6rem 0 0.6rem 1rem;
         box-shadow: none;
@@ -59,6 +60,7 @@ const isFoucsActive = props.isFoucsActiveWrap();
         background-color: rgb(242, 243, 245);
 
         img {
+            height: 15.6px;
             border-style: none;
             display: inline-block;
             width: 1.33rem;
@@ -70,6 +72,6 @@ const isFoucsActive = props.isFoucsActiveWrap();
 }
 .isFoucsActiveClass {
     width: 27rem;
-    border:1px solid #1e80ff !important;
+    border: 1px solid #1e80ff !important;
 }
 </style>

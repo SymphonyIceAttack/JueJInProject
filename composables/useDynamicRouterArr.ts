@@ -6,7 +6,7 @@ import { Ref } from "vue";
 const SubsetArrayIndex: SubSet[] = [
     {
         name: "综合",
-        path: "/",
+        path: "/main",
     },
     {
         name: "关注",
@@ -115,9 +115,10 @@ const SubsetArrayEvents: SubSet[] = [
     },
 ];
 
+
 export const useReducerDynamic = (path: LinkItemPathTypeOrigin): SubSet[] => {
     switch (path) {
-        case "/":
+        case "/main":
             return SubsetArrayIndex;
         case "/course":
             return SubsetArrayCourse;

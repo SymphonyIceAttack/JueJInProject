@@ -1,5 +1,5 @@
 export type LinkItemPathTypeOrigin =
-    | "/"
+    | "/main"
     | "/pins"
     | "/course"
     | "/live"
@@ -29,7 +29,7 @@ export type LinkItemType<
 };
 
 export type LinkListType =
-    | LinkItemType<"首页", "/", false, true>
+    | LinkItemType<"首页", "/main", false, true>
     | LinkItemType<"沸点", "/pins">
     | LinkItemType<"课程", "/course", false, true>
     | LinkItemType<"直播", "/live">

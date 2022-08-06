@@ -1,5 +1,3 @@
-import { Ref } from "vue";
-
 export type DirectoryType = "origin" | "leaf";
 
 export type DirectoryItem = {
@@ -8,3 +6,6 @@ export type DirectoryItem = {
     TopLength: number;
     type: DirectoryType;
 };
+
+
+
