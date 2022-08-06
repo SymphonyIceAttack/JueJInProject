@@ -5,9 +5,16 @@ defineProps<{
     height: number;
     item: indexPageItemType;
 }>();
+const ClickToPost = () => {
+    navigateTo("/post/123");
+};
 </script>
 <template>
-    <li :style="{ height: height + 'px' }" class="ItemBox">
+    <li
+        :style="{ height: height + 'px' }"
+        class="ItemBox"
+        @click="ClickToPost()"
+    >
         <div class="MainItem">
             <div class="ItemHeader">
                 <a>{{ item.name }}</a>

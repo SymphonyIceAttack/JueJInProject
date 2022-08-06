@@ -1,7 +1,6 @@
 <script setup lang="ts">
 navigateTo("/main");
 </script>
-
 <template>
     <div></div>
 </template>

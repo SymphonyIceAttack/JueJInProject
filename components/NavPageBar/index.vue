@@ -2,11 +2,18 @@
 import { nanoid } from "nanoid";
 const isNavBarHide = useNavBarHide();
 const currentPathArray = useDynamicRouterArr();
-
+const route = useRoute();
+const isRouterNavbarShow = computed(() => {
+    let result = true;
+    useDynamicBlackMenu().value.forEach((item) => {
+        route.path.indexOf(item) >= 0 ? (result = false) : null;
+    });
+    return result;
+});
 </script>
 
 <template>
-    <div class="NavBarOuter" v-if="currentPathArray.length !== 0">
+    <div class="NavBarOuter" v-if="isRouterNavbarShow">
         <nav class="NavBarComponents" :class="{ NavBarMoveTop: isNavBarHide }">
             <ul class="NavBarComponentsContent">
                 <NuxtLink
@@ -28,6 +35,7 @@ const currentPathArray = useDynamicRouterArr();
     position: relative;
     height: 3.833rem;
     transition: all 0.2s;
+    z-index: 5;
     .NavBarComponents {
         position: fixed;
         width: 100%;

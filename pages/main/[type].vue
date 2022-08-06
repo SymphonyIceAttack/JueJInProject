@@ -11,8 +11,6 @@ import IndexPageList from "@/PagesComponents/index/indexComponents/IndexPageCont
 
 <style lang="less" scoped>
 .IndexPage {
-    display: flex;
-    justify-content: space-between;
     height:80vh;
 }
 </style>

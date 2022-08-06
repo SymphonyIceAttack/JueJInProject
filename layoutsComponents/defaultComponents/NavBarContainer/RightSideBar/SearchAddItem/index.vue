@@ -4,10 +4,20 @@ const props = defineProps<{
     isHiddenWrap: () => Ref<boolean>;
 }>();
 const isHidden = props.isHiddenWrap();
+
+const LaterHidden = ref(isHidden.value);
+
+watch(isHidden, () => {
+    !isHidden.value
+        ? setTimeout(() => {
+              LaterHidden.value = isHidden.value;
+          }, 300)
+        : (LaterHidden.value = isHidden.value);
+});
 </script>
 
 <template>
-    <li class="SearchAddItem" :class="{ SearchAddItemHidden: isHidden }">
+    <li class="SearchAddItem" :class="{ SearchAddItemHidden: LaterHidden }">
         <slot />
     </li>
 </template>

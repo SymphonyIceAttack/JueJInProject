@@ -51,7 +51,7 @@ watch(targetIsVisible, async () => {
         await new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(1);
-            }, 1000);
+            }, 500);
         });
 
         ArrayList.value.push(

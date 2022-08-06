@@ -86,90 +86,96 @@ watch(TopLengthScrolloutput, (output) => {
 </script>
 
 <template>
-    <div
-        class="DirectorySelfListBox"
-        :style="{ position: isNavBarHide ? 'fixed' : 'relative' }"
-    >
-        <div class="DirectorySelfListHeader"> 目录 </div>
-        <div class="DirectorySelfListHr"> </div>
-        <div class="DirectorySelfList">
-            <ul ref="UlBoxel">
-                <li
-                    v-for="item in DirceortyStore.value"
-                    key="item.id"
-                    :class="{
-                        ActiveDirectory: recentId == item.id,
-                    }"
-                >
-                    <div
-                        @click="GoBackScroll(item.TopLength)"
-                        :class="{ leaf: item.type == 'leaf' }"
+    <div class="DirectorySelfListContainer">
+        <div class="DirectorySelfListBox">
+            <div class="DirectorySelfListHeader"> 目录 </div>
+            <div class="DirectorySelfListHr"> </div>
+            <div class="DirectorySelfList">
+                <ul ref="UlBoxel">
+                    <li
+                        v-for="item in DirceortyStore.value"
+                        key="item.id"
+                        :class="{
+                            ActiveDirectory: recentId == item.id,
+                        }"
                     >
-                        {{ item.content }}
-                    </div>
-                </li>
-            </ul>
+                        <div
+                            @click="GoBackScroll(item.TopLength)"
+                            :class="{ leaf: item.type == 'leaf' }"
+                        >
+                            {{ item.content }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="less" scoped>
-.DirectorySelfListBox {
+.DirectorySelfListContainer {
     top: 5rem;
     right: 20px;
-    width: 300px;
-    background-color: white;
-    transition: all 0.2s;
-    .DirectorySelfListHeader {
-        font-weight: 500;
-        padding: 1.333rem 0;
-        margin: 0 1.667rem;
-        font-size: 16px;
-        line-height: 2rem;
-        color: #1d2129;
-        border-bottom: 1px solid #e4e6eb;
-    }
-    .DirectorySelfListHr {
-        width: 90%;
-        margin: 0 auto;
-        overflow: hidden;
-        border: none;
-        border-top: 1.5px solid #333;
-    }
-    .DirectorySelfList {
-        margin-top: 1rem;
+    padding-top: 1rem;
+    position: sticky;
+    .DirectorySelfListBox {
+        width: 300px;
         background-color: white;
         transition: all 0.2s;
-        ul {
-            width: 100%;
-            height: 500px;
-            overflow: auto;
-            li {
-                height: 40px;
-                margin: 0;
-                padding-left: 2rem;
-                padding-right: 1rem;
-                font-size: 1.167rem;
-                font-weight: 400;
-                line-height: 40px;
-                color: #333;
-                list-style: none;
-                div {
-                    padding-left: 1rem;
-                    height: 100%;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    &:hover {
-                        background-color: rgb(227, 230, 234);
+        height: 500px;
+        border-radius: 5px;
+        margin-top: 1rem;
+        .DirectorySelfListHeader {
+            font-weight: 500;
+            padding: 1.333rem 0;
+            margin: 0 1.667rem;
+            font-size: 16px;
+            line-height: 2rem;
+            color: #1d2129;
+            border-bottom: 1px solid #e4e6eb;
+        }
+        .DirectorySelfListHr {
+            width: 90%;
+            margin: 0 auto;
+            overflow: hidden;
+            border: none;
+            border-top: 1.5px solid #333;
+        }
+        .DirectorySelfList {
+            margin-top: 1rem;
+            background-color: white;
+            transition: all 0.2s;
+            ul {
+                width: 100%;
+                height: 500px;
+                overflow: auto;
+                li {
+                    height: 40px;
+                    margin: 0;
+                    padding-left: 2rem;
+                    padding-right: 1rem;
+                    font-size: 1.167rem;
+                    font-weight: 400;
+                    line-height: 40px;
+                    color: #333;
+                    list-style: none;
+                    div {
+                        padding-left: 1rem;
+                        height: 100%;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgb(227, 230, 234);
+                        }
+                    }
+                    div.leaf {
+                        padding-left: 2rem;
                     }
                 }
-                div.leaf {
-                    padding-left: 2rem;
+                li.ActiveDirectory {
+                    color: blue;
+                    border-left: 2px solid blueviolet;
                 }
-            }
-            li.ActiveDirectory {
-                color: blue;
-                border-left: 2px solid blueviolet;
             }
         }
     }

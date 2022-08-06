@@ -7,5 +7,7 @@ export type DirectoryItem = {
     type: DirectoryType;
 };
 
-
-
+export type DirectoryItemProps = {
+    content: string;
+    type: DirectoryType;
+};

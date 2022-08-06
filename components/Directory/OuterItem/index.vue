@@ -2,13 +2,12 @@
 import { useDirceortyStore } from "@/Piniastore/DirceortyStore";
 import { nanoid } from "nanoid";
 import { useElementBounding, useWindowScroll } from "@vueuse/core";
-import type { DirectoryType } from "~~/ProjectTypes/DirectoryTypes";
+import type { DirectoryItemProps } from "~~/ProjectTypes/DirectoryTypes";
 const divRef = ref<HTMLDivElement>();
 const DirceortyStore = useDirceortyStore();
 const id = nanoid();
 const props = defineProps<{
-    content: string;
-    type: DirectoryType;
+    item: DirectoryItemProps;
 }>();
 
 const BoundingClientRect = useElementBounding(divRef);
@@ -18,8 +17,8 @@ onMounted(() => {
     DirceortyStore.pushNewItem({
         id: id,
         TopLength: BoundingClientRect.top.value,
-        content: props.content,
-        type: props.type,
+        content: props.item.content,
+        type: props.item.type,
     });
 });
 watch([x, y], () => {

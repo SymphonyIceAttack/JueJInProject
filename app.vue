@@ -12,7 +12,6 @@
     padding: 0;
     list-style: none;
     direction: none;
-    height: 0px;
 }
 body {
     font-family: "Poppins", sans-serif;
@@ -28,6 +27,9 @@ a {
     text-decoration: none;
 }
 
+iframe {
+    display: none;
+}
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;

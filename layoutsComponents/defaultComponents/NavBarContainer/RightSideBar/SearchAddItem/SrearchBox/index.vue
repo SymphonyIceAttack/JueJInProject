@@ -5,6 +5,8 @@ const props = defineProps<{
 }>();
 
 const isFoucsActive = props.isFoucsActiveWrap();
+
+
 </script>
 
 <template>

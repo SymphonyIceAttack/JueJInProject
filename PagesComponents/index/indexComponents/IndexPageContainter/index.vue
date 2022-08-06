@@ -9,7 +9,7 @@ const isNavBarHide = useNavBarHide();
 
 <style lang="less" scoped>
 .IndexPageContainter {
-    height: 100%;
+    height: calc(100% + 2rem);
     width: 80%;
     margin: 1rem auto;
     display: flex;
@@ -20,6 +20,6 @@ const isNavBarHide = useNavBarHide();
 }
 div.NavBarMoveTop {
     transform: translateY(-5rem);
-    height: calc(100% + 10rem);
+    height: calc(100% + 7rem);
 }
 </style>

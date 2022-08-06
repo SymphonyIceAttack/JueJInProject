@@ -10,39 +10,39 @@ const SubsetArrayIndex: SubSet[] = [
     },
     {
         name: "关注",
-        path: "/following",
+        path: "/main/following",
     },
     {
         name: "后端",
-        path: "/backend",
+        path: "/main/backend",
     },
     {
         name: "前端",
-        path: "/frontend",
+        path: "/main/frontend",
     },
     {
         name: "Android",
-        path: "/android",
+        path: "/main/android",
     },
     {
         name: "iOS",
-        path: "/ios",
+        path: "/main/ios",
     },
     {
         name: "人工智能",
-        path: "/ai",
+        path: "/main/ai",
     },
     {
         name: "开发工具",
-        path: "/freebie",
+        path: "/main/freebie",
     },
     {
         name: "代码人生",
-        path: "/career",
+        path: "/main/career",
     },
     {
         name: "阅读",
-        path: "/article",
+        path: "/main/article",
     },
 ];
 
