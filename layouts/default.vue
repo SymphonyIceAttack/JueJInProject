@@ -9,6 +9,11 @@ import VipBox from "@navBarLayout/RightSideBar/VipBox/index.vue";
 import NotifyMessage from "@navBarLayout/RightSideBar/NotifyMessage/index.vue";
 import AvatarBox from "@navBarLayout/RightSideBar/AvatarBox/index.vue";
 
+const isNavBarHide = useNavBarHide();
+const route = useRoute();
+watch(route, () => {
+    isNavBarHide.value = false;
+});
 const isFoucsActive = ref(false);
 // 这里之所以包一层，是因为ref传入模版中会自动脱钩，所以传入的值会变为一个单纯的布尔值
 //为什么不直接返回ref，只因为闭包会导致每次调用后都会返回一个新的ref

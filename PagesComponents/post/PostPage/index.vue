@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import PostContent from "@/PagesComponents/post/PostPage/PostContent/index.vue";
+import ContentDirectory from "@/PagesComponents/post/PostPage/PostContent/ContentDirectory/index.vue";
+import SideTab from "@/PagesComponents/post/PostPage/SideTab/index.vue";
 import { nanoid } from "nanoid";
 import type { DirectoryItemProps } from "~~/ProjectTypes/DirectoryTypes";
 const DirectoryArrItem = ref<
@@ -53,20 +56,17 @@ const DirectoryArrItem = ref<
 </script>
 <template>
     <div class="Post">
-        <div class="Content">
-            <div
-                class="ContentDirectory"
-                v-for="item in DirectoryArrItem"
-                :key="nanoid()"
-            >
+        <PostContent>
+            <ContentDirectory v-for="item in DirectoryArrItem" :key="nanoid()">
                 <DirectoryOuterItem :item="item.itemProps">
                     {{ item.pageContent }}
                 </DirectoryOuterItem>
-            </div>
-        </div>
-        <div class="SideTab">
+            </ContentDirectory>
+        </PostContent>
+
+        <SideTab>
             <DirectorySelfList />
-        </div>
+        </SideTab>
     </div>
 </template>
 
@@ -75,22 +75,5 @@ const DirectoryArrItem = ref<
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    .Content {
-        width: 50vw;
-        border: 1px solid yellowgreen;
-        .ContentDirectory {
-            height: 500px;
-        }
-    }
-    .SideTab {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 30vw;
-        position: relative;
-        // 这里100%的原因是，整个盒子的高度是有左侧子盒子的决定的
-        height: 100%;
-        border: 1px solid yellowgreen;
-    }
 }
 </style>
