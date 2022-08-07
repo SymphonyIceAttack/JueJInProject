@@ -2,7 +2,6 @@
 import { useWindowScroll } from "@vueuse/core";
 const { x, y } = useWindowScroll();
 const isNavBarHide = useNavBarHide();
-
 </script>
 
 <template>
