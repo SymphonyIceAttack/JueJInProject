@@ -6,7 +6,6 @@ import {
     TransitionPresets,
     useTransition,
 } from "@vueuse/core";
-const isNavBarHide = useNavBarHide();
 const DirceortyStore = useDirceortyStore();
 const { x, y } = useWindowScroll();
 const UlBoxel = ref<HTMLElement>();
