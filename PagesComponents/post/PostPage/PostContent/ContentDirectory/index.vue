@@ -8,5 +8,6 @@
 <style lang="less" scoped>
 .ContentDirectory {
     height: 500px;
+    width: 100%;
 }
 </style>
