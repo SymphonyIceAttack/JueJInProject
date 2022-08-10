@@ -1,12 +1,16 @@
 <script setup lang="ts"></script>
 <template>
-    <div class="ContentDirectory">
+    <div class="CommentModule">
         <slot />
     </div>
 </template>
 
 <style lang="less" scoped>
-.ContentDirectory {
+.CommentModule {
+    box-sizing: border-box;
+    width: 100%;
     height: 500px;
+    background-color: white;
+    padding: 2rem;
 }
 </style>

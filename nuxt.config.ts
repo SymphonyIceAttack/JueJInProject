@@ -10,9 +10,15 @@ export default defineNuxtConfig({
             "layoutsComponents/defaultComponents/NavBarContainer"
         ),
     },
+    nitro: {
+        prerender: {
+            routes: ["/post/123"],
+        },
+    },
     modules: [],
     typescript: {
         shim: false,
+        strict: true,
     },
     build: {
         postcss: {
