@@ -53,6 +53,7 @@ onUnmounted(() => {
 });
 onMounted(() => {
     document.documentElement.scrollTop = 0;
+
     recentId.value = DirceortyStore.value[0].id;
 });
 watch([x, y], () => {
@@ -70,7 +71,7 @@ watch(recentId, (newValue, oldValue) => {
 
     const oldIndex = getArrayIndex(DirceortyStore.value, oldValue);
 
-    UlBoxel.value!.scrollTop += 50 * (newIndex - oldIndex);
+    UlBoxel.value!.scrollTop += 40 * (newIndex - oldIndex);
     !isTransition.value
         ? (TopLengthScroll.value =
               document.documentElement.scrollTop +
@@ -100,7 +101,7 @@ watch(TopLengthScrolloutput, (output) => {
                     >
                         <div
                             @click="GoBackScroll(item.TopLength)"
-                            :class="{ leaf: item.type == 'leaf' }"
+                            :style="{ paddingLeft: `${1 - item.index}rem` }"
                         >
                             {{ item.content }}
                         </div>
@@ -166,9 +167,6 @@ watch(TopLengthScrolloutput, (output) => {
                         &:hover {
                             background-color: rgb(227, 230, 234);
                         }
-                    }
-                    div.leaf {
-                        padding-left: 2rem;
                     }
                 }
                 li.ActiveDirectory {

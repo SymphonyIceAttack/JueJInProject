@@ -22,9 +22,16 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@vueuse/router": "^8.9.4",
     "autoprefixer": "^10.4.7",
+    "gray-matter": "^4.0.3",
     "less-plugin-autoprefix": "^2.0.0",
     "nanoid": "^4.0.0",
     "postcss": "^8.4.14",
-    "postcss-pxtorem": "^6.0.0"
+    "postcss-pxtorem": "^6.0.0",
+    "rehype-sanitize": "^5.0.1",
+    "rehype-stringify": "^9.0.3",
+    "remark": "^14.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.1",
+    "remark-rehype": "^10.1.0"
   }
 }
