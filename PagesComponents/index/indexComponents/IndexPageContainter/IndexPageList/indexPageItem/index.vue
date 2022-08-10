@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import type { indexPageItemType } from "@/ProjectTypes/indexPageItemType";
 import { nanoid } from "nanoid";
+const router = useRouter();
 defineProps<{
     height: number;
     item: indexPageItemType;
 }>();
 const ClickToPost = () => {
-    navigateTo("/post/123");
+    router.push({
+        path: "/post/123",
+    });
 };
 </script>
 <template>

@@ -19,6 +19,7 @@ onMounted(() => {
         TopLength: BoundingClientRect.top.value,
         content: props.item.content,
         type: props.item.type,
+        index: 1,
     });
 });
 watch([x, y], () => {

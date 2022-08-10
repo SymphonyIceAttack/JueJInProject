@@ -31,7 +31,6 @@ watch(TextValue, (newValue, oldValue) => {
     box-sizing: border-box;
     textarea {
         box-sizing: border-box;
-        user-select: none;
         border-radius: 5px;
         padding: 8px 8px;
         width: 100%;
@@ -41,6 +40,10 @@ watch(TextValue, (newValue, oldValue) => {
         resize: none;
         color: #252933;
         background-color: rgb(242, 243, 245);
+        -webkit-user-select: auto; /*webkit浏览器*/
+        user-select: auto;
+        -o-user-select: auto;
+        -ms-user-select: auto;
     }
     textarea.ActiveTextarea {
         background-color: white;
