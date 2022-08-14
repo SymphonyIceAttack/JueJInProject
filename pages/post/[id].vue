@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import PostPage from "@/PagesComponents/post/PostPage/index.vue";
 import markdownTransform from "@/PagesComponents/post/PostPage/markdownTransform/index.vue";
-const HtmlDom = ref<HTMLDivElement>();
+const route = useRoute();
 const { data } = await useAsyncData(
     "getPostData",
     (): Promise<{
         id: string;
         contentHtml: string;
-    }> => getPostData("ssg-ssr")
+    }> => {
+        return getPostData(route.params.id as string);
+    }
 );
+
 </script>
 <template>
     <div class="PostContainer">

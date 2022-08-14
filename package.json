@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@vueuse/router": "^8.9.4",
     "autoprefixer": "^10.4.7",
     "gray-matter": "^4.0.3",

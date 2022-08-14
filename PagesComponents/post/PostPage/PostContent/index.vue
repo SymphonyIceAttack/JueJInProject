@@ -8,6 +8,5 @@
 <style lang="less" scoped>
 .Content {
     width: 50vw;
-    border: 1px solid yellowgreen;
 }
 </style>
