@@ -24,7 +24,9 @@ const dev = process.dev;
         class="ItemBox"
         :to="
             !dev
-                ? 'http://www.huancaibingxi.online/'
+                ? 'http://www.huancaibingxi.online/' +
+                  '/post/' +
+                  AllPostId[currentPostId].params.id
                 : '' + '/post/' + AllPostId[currentPostId].params.id
         "
         target="_blank"

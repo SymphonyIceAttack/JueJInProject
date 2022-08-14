@@ -1,0 +1,1 @@
+import{a as e,o as a,b as c}from"./entry-d7f3b60d.mjs";const r={};function t(o,n){return a(),c("div",null,"\u6211\u662Farticle")}var s=e(r,[["render",t],["__scopeId","data-v-60a95c30"]]);export{s as default};
