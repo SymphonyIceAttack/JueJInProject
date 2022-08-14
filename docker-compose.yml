@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nuxt_juejin:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "80:3000"
+    volumes:
+      - ./:/usr/app
+      - /usr/app/node_modules
