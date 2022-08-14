@@ -3,6 +3,12 @@ import type { indexPageItemType } from "@/ProjectTypes/indexPageItemType";
 import { nanoid } from "nanoid";
 import { useVirtualList, useIntersectionObserver } from "@vueuse/core";
 import indexPageItem from "./indexPageItem/index.vue";
+
+const props = defineProps<{
+    AllPostId: {
+        params: { id: string };
+    }[];
+}>();
 const ulBoxList = ref<HTMLUListElement>();
 const isPosting = ref(false);
 const targetBottomLi = ref<HTMLLIElement>();
@@ -33,6 +39,8 @@ const { list, containerProps, wrapperProps } = useVirtualList(ArrayList, {
     itemHeight: 130,
 });
 const isNavBarHide = useNavBarHide();
+
+const AllPostId = props.AllPostId;
 
 watch(
     () => wrapperProps.value.style.marginTop,
@@ -69,6 +77,7 @@ watch(targetIsVisible, async () => {
                 :key="item.index"
                 :height="130"
                 :item="item.data"
+                :AllPostId="AllPostId"
             />
             <li ref="targetBottomLi" style="height: 130px"></li>
         </ul>

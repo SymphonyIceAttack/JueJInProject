@@ -11,11 +11,9 @@ export default defineNuxtConfig({
         ),
     },
     nitro: {
-        prerender: {
-            routes: ["/post/123"],
-        },
+        prerender: {},
     },
-    modules: [],
+    modules: ["@nuxtjs/dotenv"],
     typescript: {
         shim: false,
         strict: true,

@@ -2,21 +2,32 @@
 import type { indexPageItemType } from "@/ProjectTypes/indexPageItemType";
 import { nanoid } from "nanoid";
 const router = useRouter();
-defineProps<{
+const props = defineProps<{
     height: number;
     item: indexPageItemType;
+    AllPostId: {
+        params: {
+            id: string;
+        };
+    }[];
 }>();
-const ClickToPost = () => {
-    router.push({
-        path: "/post/123",
-    });
+const AllPostId = props.AllPostId;
+const randomRange = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min)) + min;
 };
+const currentPostId = computed(() => randomRange(0, AllPostId.length));
+const dev = process.dev;
 </script>
 <template>
-    <li
+    <NuxtLink
         :style="{ height: height + 'px' }"
         class="ItemBox"
-        @click="ClickToPost()"
+        :to="
+            !dev
+                ? 'http://www.huancaibingxi.online/'
+                : '' + '/post/' + AllPostId[currentPostId].params.id
+        "
+        target="_blank"
     >
         <div class="MainItem">
             <div class="ItemHeader">
@@ -44,7 +55,7 @@ const ClickToPost = () => {
             </ul>
         </div>
         <div class="line"></div>
-    </li>
+    </NuxtLink>
 </template>
 
 <style lang="less" scoped>
@@ -53,6 +64,7 @@ const ClickToPost = () => {
     position: relative;
     background-clip: content-box;
     cursor: pointer;
+    display: block;
     &:hover {
         background-color: #f4f5f5;
     }
