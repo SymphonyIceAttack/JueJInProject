@@ -33,13 +33,13 @@ const dev = process.dev;
     >
         <div class="MainItem">
             <div class="ItemHeader">
-                <span class="link">{{ item.name }}</span>
+                <a>{{ item.name }}</a>
                 <span>{{ item.day.toDateString() }}</span>
                 <div v-for="tag in item.tags" :key="nanoid()" class="tag">{{
                     tag
                 }}</div>
             </div>
-            <div class="TitleRow"> <a href=""> xxxxxxxxx </a> </div>
+            <div class="TitleRow"> <a> xxxxxxxxx </a> </div>
             <div class="Describe">{{ item.Describe }}</div>
             <ul class="actionList">
                 <li class="view">
@@ -79,7 +79,7 @@ const dev = process.dev;
             word-break: break-word;
             height: 22px;
             margin: 1rem 0;
-            .link {
+            a {
                 display: flex;
                 align-items: center;
                 margin-right: 8px;
