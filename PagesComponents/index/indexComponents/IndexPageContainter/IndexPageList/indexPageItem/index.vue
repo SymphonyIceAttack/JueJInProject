@@ -25,7 +25,7 @@ const dev = process.dev;
         :to="
             !dev
                 ? 'http://www.huancaibingxi.online/' +
-                  '/post/' +
+                  'post/' +
                   AllPostId[currentPostId].params.id
                 : '' + '/post/' + AllPostId[currentPostId].params.id
         "
