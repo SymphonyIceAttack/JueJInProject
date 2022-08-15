@@ -5341,16 +5341,16 @@ const _sfc_main$l = /* @__PURE__ */ vue_cjs_prod.defineComponent({
       _push(serverRenderer.exports.ssrRenderComponent(_component_NuxtLink, vue_cjs_prod.mergeProps({
         style: { height: __props.height + "px" },
         class: "ItemBox",
-        to: !vue_cjs_prod.unref(dev) ? "http://www.huancaibingxi.online//post/" + vue_cjs_prod.unref(AllPostId)[vue_cjs_prod.unref(currentPostId)].params.id : "/post/" + vue_cjs_prod.unref(AllPostId)[vue_cjs_prod.unref(currentPostId)].params.id,
+        to: !vue_cjs_prod.unref(dev) ? "http://www.huancaibingxi.online/post/" + vue_cjs_prod.unref(AllPostId)[vue_cjs_prod.unref(currentPostId)].params.id : "/post/" + vue_cjs_prod.unref(AllPostId)[vue_cjs_prod.unref(currentPostId)].params.id,
         target: "_blank"
       }, _attrs), {
         default: vue_cjs_prod.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="MainItem" data-v-6ccf36a5${_scopeId}><div class="ItemHeader" data-v-6ccf36a5${_scopeId}><a data-v-6ccf36a5${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.name)}</a><span data-v-6ccf36a5${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.day.toDateString())}</span><!--[-->`);
+            _push2(`<div class="MainItem" data-v-19f52284${_scopeId}><div class="ItemHeader" data-v-19f52284${_scopeId}><a data-v-19f52284${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.name)}</a><span data-v-19f52284${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.day.toDateString())}</span><!--[-->`);
             serverRenderer.exports.ssrRenderList(__props.item.tags, (tag) => {
-              _push2(`<div class="tag" data-v-6ccf36a5${_scopeId}>${serverRenderer.exports.ssrInterpolate(tag)}</div>`);
+              _push2(`<div class="tag" data-v-19f52284${_scopeId}>${serverRenderer.exports.ssrInterpolate(tag)}</div>`);
             });
-            _push2(`<!--]--></div><div class="TitleRow" data-v-6ccf36a5${_scopeId}><a href="" data-v-6ccf36a5${_scopeId}> xxxxxxxxx </a></div><div class="Describe" data-v-6ccf36a5${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.Describe)}</div><ul class="actionList" data-v-6ccf36a5${_scopeId}><li class="view" data-v-6ccf36a5${_scopeId}><i data-v-6ccf36a5${_scopeId}></i><span data-v-6ccf36a5${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.actionList.view)}</span></li><li class="like" data-v-6ccf36a5${_scopeId}><i data-v-6ccf36a5${_scopeId}></i><span data-v-6ccf36a5${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.actionList.like)}</span></li><li class="comment" data-v-6ccf36a5${_scopeId}><i data-v-6ccf36a5${_scopeId}></i><span data-v-6ccf36a5${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.actionList.comment)}</span></li></ul></div><div class="line" data-v-6ccf36a5${_scopeId}></div>`);
+            _push2(`<!--]--></div><div class="TitleRow" data-v-19f52284${_scopeId}><a href="" data-v-19f52284${_scopeId}> xxxxxxxxx </a></div><div class="Describe" data-v-19f52284${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.Describe)}</div><ul class="actionList" data-v-19f52284${_scopeId}><li class="view" data-v-19f52284${_scopeId}><i data-v-19f52284${_scopeId}></i><span data-v-19f52284${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.actionList.view)}</span></li><li class="like" data-v-19f52284${_scopeId}><i data-v-19f52284${_scopeId}></i><span data-v-19f52284${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.actionList.like)}</span></li><li class="comment" data-v-19f52284${_scopeId}><i data-v-19f52284${_scopeId}></i><span data-v-19f52284${_scopeId}>${serverRenderer.exports.ssrInterpolate(__props.item.actionList.comment)}</span></li></ul></div><div class="line" data-v-19f52284${_scopeId}></div>`);
           } else {
             return [
               vue_cjs_prod.createVNode("div", { class: "MainItem" }, [
@@ -5398,7 +5398,7 @@ _sfc_main$l.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("PagesComponents/index/indexComponents/IndexPageContainter/IndexPageList/indexPageItem/index.vue");
   return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
-const indexPageItem = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["__scopeId", "data-v-6ccf36a5"]]);
+const indexPageItem = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["__scopeId", "data-v-19f52284"]]);
 const _sfc_main$k = /* @__PURE__ */ vue_cjs_prod.defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -6019,7 +6019,7 @@ const routes = [
     children: [],
     meta: meta$i,
     alias: [],
-    component: () => import('./ai.b49f9333.mjs')
+    component: () => import('./ai.dd49fffe.mjs')
   },
   {
     name: "course-android",
@@ -6028,7 +6028,7 @@ const routes = [
     children: [],
     meta: meta$h,
     alias: [],
-    component: () => import('./android.1bcfed7e.mjs')
+    component: () => import('./android.866c3766.mjs')
   },
   {
     name: "course-article",
@@ -6037,7 +6037,7 @@ const routes = [
     children: [],
     meta: meta$g,
     alias: [],
-    component: () => import('./article.6214f53a.mjs')
+    component: () => import('./article.bc2b036e.mjs')
   },
   {
     name: "course-backend",
@@ -6046,7 +6046,7 @@ const routes = [
     children: [],
     meta: meta$f,
     alias: [],
-    component: () => import('./backend.4387e3d2.mjs')
+    component: () => import('./backend.c0f4cf7c.mjs')
   },
   {
     name: "course-career",
@@ -6055,7 +6055,7 @@ const routes = [
     children: [],
     meta: meta$e,
     alias: [],
-    component: () => import('./career.f07c304e.mjs')
+    component: () => import('./career.8326987e.mjs')
   },
   {
     name: "course-following",
@@ -6064,7 +6064,7 @@ const routes = [
     children: [],
     meta: meta$d,
     alias: [],
-    component: () => import('./following.4fbae672.mjs')
+    component: () => import('./following.f817e4f8.mjs')
   },
   {
     name: "course-freebie",
@@ -6073,7 +6073,7 @@ const routes = [
     children: [],
     meta: meta$c,
     alias: [],
-    component: () => import('./freebie.bdcf809a.mjs')
+    component: () => import('./freebie.77d705a8.mjs')
   },
   {
     name: "course-frontend",
@@ -6082,7 +6082,7 @@ const routes = [
     children: [],
     meta: meta$b,
     alias: [],
-    component: () => import('./frontend.5e3851ca.mjs')
+    component: () => import('./frontend.ff919098.mjs')
   },
   {
     name: "course",
@@ -6091,7 +6091,7 @@ const routes = [
     children: [],
     meta: meta$a,
     alias: [],
-    component: () => import('./index.f29d7932.mjs')
+    component: () => import('./index.1b882ef3.mjs')
   },
   {
     name: "course-ios",
@@ -6100,7 +6100,7 @@ const routes = [
     children: [],
     meta: meta$9,
     alias: [],
-    component: () => import('./ios.e012d20a.mjs')
+    component: () => import('./ios.9b313b51.mjs')
   },
   {
     name: "events-all",
@@ -6109,7 +6109,7 @@ const routes = [
     children: [],
     meta: meta$8,
     alias: [],
-    component: () => import('./all.5ddfd8fb.mjs')
+    component: () => import('./all.b13cb719.mjs')
   },
   {
     name: "index",
@@ -6118,7 +6118,7 @@ const routes = [
     children: [],
     meta: meta$7,
     alias: [],
-    component: () => import('./index.14ab8daf.mjs')
+    component: () => import('./index.9f6cccf7.mjs')
   },
   {
     name: "live",
@@ -6127,7 +6127,7 @@ const routes = [
     children: [],
     meta: meta$6,
     alias: [],
-    component: () => import('./index.5c8b0857.mjs')
+    component: () => import('./index.64f01e9e.mjs')
   },
   {
     name: "main-type",
@@ -6136,7 +6136,7 @@ const routes = [
     children: [],
     meta: meta$5,
     alias: [],
-    component: () => import('./_type_.190a4bcb.mjs')
+    component: () => import('./_type_.a4f03d7e.mjs')
   },
   {
     name: "main",
@@ -6145,7 +6145,7 @@ const routes = [
     children: [],
     meta: meta$4,
     alias: [],
-    component: () => import('./index.92530f82.mjs')
+    component: () => import('./index.b0ec845e.mjs')
   },
   {
     name: "news-category",
@@ -6154,7 +6154,7 @@ const routes = [
     children: [],
     meta: meta$3,
     alias: [],
-    component: () => import('./index.cbc4bb51.mjs')
+    component: () => import('./index.f6a61fac.mjs')
   },
   {
     name: "news",
@@ -6163,7 +6163,7 @@ const routes = [
     children: [],
     meta: meta$2,
     alias: [],
-    component: () => import('./index.4b2370cb.mjs')
+    component: () => import('./index.71ab4252.mjs')
   },
   {
     name: "pins",
@@ -6172,7 +6172,7 @@ const routes = [
     children: [],
     meta: meta$1,
     alias: [],
-    component: () => import('./index.d14f6049.mjs')
+    component: () => import('./index.d27372a4.mjs')
   },
   {
     name: "post-id",
@@ -6181,7 +6181,7 @@ const routes = [
     children: [],
     meta,
     alias: [],
-    component: () => import('./_id_.58201f0c.mjs')
+    component: () => import('./_id_.c96ad0d4.mjs')
   }
 ];
 const configRouterOptions = {};
@@ -6335,7 +6335,7 @@ const _sfc_main$1 = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.1f4cf91e.mjs'));
+    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.d7a8949b.mjs'));
     const nuxtApp = useNuxtApp();
     nuxtApp.hooks.callHookWith((hooks) => hooks.map((hook) => hook()), "vue:setup");
     const error = useError();
@@ -6367,7 +6367,7 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const layouts = {
-  default: vue_cjs_prod.defineAsyncComponent(() => import('./default.b25dd9de.mjs'))
+  default: vue_cjs_prod.defineAsyncComponent(() => import('./default.93e8f72a.mjs'))
 };
 const defaultLayoutTransition = { name: "layout", mode: "out-in" };
 const __nuxt_component_0 = vue_cjs_prod.defineComponent({
