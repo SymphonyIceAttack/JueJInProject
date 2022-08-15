@@ -12,12 +12,10 @@ import ImageBox from "./PostContent/CommentModule/CommentBox/FormBox/FooterButto
 import SubmitButton from "./PostContent/CommentModule/CommentBox/FormBox/FooterButtonList/SubmitButton/index.vue";
 
 import SideTab from "./SideTab/index.vue";
-
 </script>
 <template>
     <div class="Post">
         <PostContent>
-
             <slot />
 
             <CommentModule>
