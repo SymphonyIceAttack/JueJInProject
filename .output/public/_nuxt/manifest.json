@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-3c2bfd2e.mjs",
+    "file": "entry-bb9c4d51.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -27,11 +27,11 @@
       "layouts/default.vue"
     ],
     "css": [
-      "entry.ba9eaf98.css"
+      "entry.264ebf53.css"
     ]
   },
   "virtual:nuxt:/Users/huancaibingxi/Downloads/前端整合/Nuxt3/nuxt3-web-juejin/.nuxt/error-component.mjs": {
-    "file": "error-component-bc87ae71.mjs",
+    "file": "error-component-f9d20060.mjs",
     "src": "virtual:nuxt:/Users/huancaibingxi/Downloads/前端整合/Nuxt3/nuxt3-web-juejin/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -43,7 +43,7 @@
     ]
   },
   "pages/course/ai.vue": {
-    "file": "ai-c46ee49b.mjs",
+    "file": "ai-5cfca9e0.mjs",
     "src": "pages/course/ai.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -51,7 +51,7 @@
     ]
   },
   "pages/course/android.vue": {
-    "file": "android-4fb3761f.mjs",
+    "file": "android-a4c64b30.mjs",
     "src": "pages/course/android.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -59,7 +59,7 @@
     ]
   },
   "pages/course/article.vue": {
-    "file": "article-acc407fd.mjs",
+    "file": "article-71729b34.mjs",
     "src": "pages/course/article.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -67,7 +67,7 @@
     ]
   },
   "pages/course/backend.vue": {
-    "file": "backend-97c81dbd.mjs",
+    "file": "backend-1449bd0f.mjs",
     "src": "pages/course/backend.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -75,7 +75,7 @@
     ]
   },
   "pages/course/career.vue": {
-    "file": "career-6f376308.mjs",
+    "file": "career-7ccc921b.mjs",
     "src": "pages/course/career.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -83,7 +83,7 @@
     ]
   },
   "pages/course/following.vue": {
-    "file": "following-bf04774c.mjs",
+    "file": "following-2308100d.mjs",
     "src": "pages/course/following.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -91,7 +91,7 @@
     ]
   },
   "pages/course/freebie.vue": {
-    "file": "freebie-b49cc64e.mjs",
+    "file": "freebie-9c408d9f.mjs",
     "src": "pages/course/freebie.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -99,7 +99,7 @@
     ]
   },
   "pages/course/frontend.vue": {
-    "file": "frontend-f81d509f.mjs",
+    "file": "frontend-2b4f8d08.mjs",
     "src": "pages/course/frontend.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -107,7 +107,7 @@
     ]
   },
   "pages/course/index.vue": {
-    "file": "index-67f52269.mjs",
+    "file": "index-dd274784.mjs",
     "src": "pages/course/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -115,7 +115,7 @@
     ]
   },
   "pages/course/ios.vue": {
-    "file": "ios-1dba5a84.mjs",
+    "file": "ios-1484ec15.mjs",
     "src": "pages/course/ios.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -123,7 +123,7 @@
     ]
   },
   "pages/events/all.vue": {
-    "file": "all-dd1832c3.mjs",
+    "file": "all-4d3dfb61.mjs",
     "src": "pages/events/all.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -131,7 +131,7 @@
     ]
   },
   "pages/index.vue": {
-    "file": "index-4398ba5c.mjs",
+    "file": "index-e98492ee.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -139,7 +139,7 @@
     ]
   },
   "pages/live/index.vue": {
-    "file": "index-a823c5d3.mjs",
+    "file": "index-7f8d7185.mjs",
     "src": "pages/live/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -147,58 +147,58 @@
     ]
   },
   "pages/main/[type].vue": {
-    "file": "_type_-e81489d2.mjs",
+    "file": "_type_-43e96a1e.mjs",
     "src": "pages/main/[type].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_useMarkDownTransform-5d330bb7.mjs",
-      "_index-6005a37b.mjs",
-      "_index-f690523a.mjs",
-      "_useNavBarHide-41babd41.mjs"
+      "_useMarkDownTransform-761680af.mjs",
+      "_index-28609f37.mjs",
+      "_index-cdde8fb0.mjs",
+      "_useNavBarHide-36128c47.mjs"
     ]
   },
-  "_useMarkDownTransform-5d330bb7.mjs": {
-    "file": "useMarkDownTransform-5d330bb7.mjs",
+  "_useMarkDownTransform-761680af.mjs": {
+    "file": "useMarkDownTransform-761680af.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_index-f690523a.mjs"
+      "_index-cdde8fb0.mjs"
     ]
   },
-  "_index-6005a37b.mjs": {
-    "file": "index-6005a37b.mjs",
+  "_index-28609f37.mjs": {
+    "file": "index-28609f37.mjs",
     "imports": [
-      "_useNavBarHide-41babd41.mjs",
+      "_useNavBarHide-36128c47.mjs",
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_index-f690523a.mjs"
+      "_index-cdde8fb0.mjs"
     ]
   },
-  "_index-f690523a.mjs": {
-    "file": "index-f690523a.mjs",
+  "_index-cdde8fb0.mjs": {
+    "file": "index-cdde8fb0.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_useNavBarHide-41babd41.mjs": {
-    "file": "useNavBarHide-41babd41.mjs",
+  "_useNavBarHide-36128c47.mjs": {
+    "file": "useNavBarHide-36128c47.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/main/index.vue": {
-    "file": "index-042bc20f.mjs",
+    "file": "index-c7780ce0.mjs",
     "src": "pages/main/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_useMarkDownTransform-5d330bb7.mjs",
-      "_index-6005a37b.mjs",
-      "_index-f690523a.mjs",
-      "_useNavBarHide-41babd41.mjs"
+      "_useMarkDownTransform-761680af.mjs",
+      "_index-28609f37.mjs",
+      "_index-cdde8fb0.mjs",
+      "_useNavBarHide-36128c47.mjs"
     ]
   },
   "pages/news/category/index.vue": {
-    "file": "index-9cbfb716.mjs",
+    "file": "index-253dca2e.mjs",
     "src": "pages/news/category/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -206,7 +206,7 @@
     ]
   },
   "pages/news/index.vue": {
-    "file": "index-1e3886ba.mjs",
+    "file": "index-2843d6e7.mjs",
     "src": "pages/news/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -214,7 +214,7 @@
     ]
   },
   "pages/pins/index.vue": {
-    "file": "index-b71ad36b.mjs",
+    "file": "index-1309a959.mjs",
     "src": "pages/pins/index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -222,30 +222,30 @@
     ]
   },
   "pages/post/[id].vue": {
-    "file": "_id_-30b901cf.mjs",
+    "file": "_id_-b35f1e32.mjs",
     "src": "pages/post/[id].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_useMarkDownTransform-5d330bb7.mjs",
-      "_index-f690523a.mjs"
+      "_useMarkDownTransform-761680af.mjs",
+      "_index-cdde8fb0.mjs"
     ]
   },
   "layouts/default.vue": {
-    "file": "default-6291afb5.mjs",
+    "file": "default-d92633da.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_useNavBarHide-41babd41.mjs",
-      "_index-f690523a.mjs"
+      "_useNavBarHide-36128c47.mjs",
+      "_index-cdde8fb0.mjs"
     ],
     "css": [
       "default.3ac2c694.css"
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "error-404-fa5b3fd8.mjs",
+    "file": "error-404-e75939d4.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -256,7 +256,7 @@
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "error-500-e1924b49.mjs",
+    "file": "error-500-c0a3ef15.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [

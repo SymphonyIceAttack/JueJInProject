@@ -3417,10 +3417,10 @@ function defaultContentType(event, type) {
     event.res.setHeader("Content-Type", type);
   }
 }
-function sendRedirect(event, location, code = 302) {
+function sendRedirect(event, location2, code = 302) {
   event.res.statusCode = code;
-  event.res.setHeader("Location", location);
-  return send(event, "Redirecting to " + location, MIMES.html);
+  event.res.setHeader("Location", location2);
+  return send(event, "Redirecting to " + location2, MIMES.html);
 }
 class H3Error extends Error {
   constructor() {
@@ -5478,9 +5478,13 @@ const _sfc_main$j = /* @__PURE__ */ vue_cjs_prod.defineComponent({
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const AllPostId = ([__temp, __restore] = vue_cjs_prod.withAsyncContext(() => useAsyncData("AllPostId", () => getAllPostIds(), "$ApV1p0Bo4B")), __temp = await __temp, __restore(), __temp);
+    const AllPostId = ([__temp, __restore] = vue_cjs_prod.withAsyncContext(() => useAsyncData("AllPostId", (NuxtApp) => {
+      var _a;
+      ((_a = NuxtApp == null ? void 0 : NuxtApp.ssrContext) == null ? void 0 : _a.noSSR) === void 0 && location.reload();
+      return getAllPostIds();
+    }, "$mgnKtPMFS0")), __temp = await __temp, __restore(), __temp);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${serverRenderer.exports.ssrRenderAttrs(vue_cjs_prod.mergeProps({ class: "IndexPage" }, _attrs))} data-v-54d82458>`);
+      _push(`<div${serverRenderer.exports.ssrRenderAttrs(vue_cjs_prod.mergeProps({ class: "IndexPage" }, _attrs))} data-v-08121aee>`);
       _push(serverRenderer.exports.ssrRenderComponent(IndexPageContainter, null, {
         default: vue_cjs_prod.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -5513,9 +5517,13 @@ const _sfc_main$i = /* @__PURE__ */ vue_cjs_prod.defineComponent({
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const AllPostId = ([__temp, __restore] = vue_cjs_prod.withAsyncContext(() => useAsyncData("AllPostId", () => getAllPostIds(), "$eHoaktOh6E")), __temp = await __temp, __restore(), __temp);
+    const AllPostId = ([__temp, __restore] = vue_cjs_prod.withAsyncContext(() => useAsyncData("AllPostId", (NuxtApp) => {
+      var _a;
+      ((_a = NuxtApp == null ? void 0 : NuxtApp.ssrContext) == null ? void 0 : _a.noSSR) === void 0 && location.reload();
+      return getAllPostIds();
+    }, "$lFprIOWsDB")), __temp = await __temp, __restore(), __temp);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${serverRenderer.exports.ssrRenderAttrs(vue_cjs_prod.mergeProps({ class: "IndexPage" }, _attrs))} data-v-7ffa24b4>`);
+      _push(`<div${serverRenderer.exports.ssrRenderAttrs(vue_cjs_prod.mergeProps({ class: "IndexPage" }, _attrs))} data-v-0d0879ce>`);
       _push(serverRenderer.exports.ssrRenderComponent(IndexPageContainter, null, {
         default: vue_cjs_prod.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -6019,7 +6027,7 @@ const routes = [
     children: [],
     meta: meta$i,
     alias: [],
-    component: () => import('./ai.1360f9a4.mjs')
+    component: () => import('./ai.4ccf4d20.mjs')
   },
   {
     name: "course-android",
@@ -6028,7 +6036,7 @@ const routes = [
     children: [],
     meta: meta$h,
     alias: [],
-    component: () => import('./android.806ae6ff.mjs')
+    component: () => import('./android.5a6f363e.mjs')
   },
   {
     name: "course-article",
@@ -6037,7 +6045,7 @@ const routes = [
     children: [],
     meta: meta$g,
     alias: [],
-    component: () => import('./article.1d08e6ac.mjs')
+    component: () => import('./article.e0b42a84.mjs')
   },
   {
     name: "course-backend",
@@ -6046,7 +6054,7 @@ const routes = [
     children: [],
     meta: meta$f,
     alias: [],
-    component: () => import('./backend.1cea0e13.mjs')
+    component: () => import('./backend.9b813d0b.mjs')
   },
   {
     name: "course-career",
@@ -6055,7 +6063,7 @@ const routes = [
     children: [],
     meta: meta$e,
     alias: [],
-    component: () => import('./career.739b847f.mjs')
+    component: () => import('./career.278bb946.mjs')
   },
   {
     name: "course-following",
@@ -6064,7 +6072,7 @@ const routes = [
     children: [],
     meta: meta$d,
     alias: [],
-    component: () => import('./following.d539c40e.mjs')
+    component: () => import('./following.e6469bee.mjs')
   },
   {
     name: "course-freebie",
@@ -6073,7 +6081,7 @@ const routes = [
     children: [],
     meta: meta$c,
     alias: [],
-    component: () => import('./freebie.2f75e3ba.mjs')
+    component: () => import('./freebie.3e936d9b.mjs')
   },
   {
     name: "course-frontend",
@@ -6082,7 +6090,7 @@ const routes = [
     children: [],
     meta: meta$b,
     alias: [],
-    component: () => import('./frontend.28856f55.mjs')
+    component: () => import('./frontend.3803d57d.mjs')
   },
   {
     name: "course",
@@ -6091,7 +6099,7 @@ const routes = [
     children: [],
     meta: meta$a,
     alias: [],
-    component: () => import('./index.7b334597.mjs')
+    component: () => import('./index.ab2e5142.mjs')
   },
   {
     name: "course-ios",
@@ -6100,7 +6108,7 @@ const routes = [
     children: [],
     meta: meta$9,
     alias: [],
-    component: () => import('./ios.c879e100.mjs')
+    component: () => import('./ios.1dbbc691.mjs')
   },
   {
     name: "events-all",
@@ -6109,7 +6117,7 @@ const routes = [
     children: [],
     meta: meta$8,
     alias: [],
-    component: () => import('./all.7c75cbfd.mjs')
+    component: () => import('./all.53efe447.mjs')
   },
   {
     name: "index",
@@ -6118,7 +6126,7 @@ const routes = [
     children: [],
     meta: meta$7,
     alias: [],
-    component: () => import('./index.de7664df.mjs')
+    component: () => import('./index.fd36f278.mjs')
   },
   {
     name: "live",
@@ -6127,7 +6135,7 @@ const routes = [
     children: [],
     meta: meta$6,
     alias: [],
-    component: () => import('./index.04c73851.mjs')
+    component: () => import('./index.04b438ca.mjs')
   },
   {
     name: "main-type",
@@ -6136,7 +6144,7 @@ const routes = [
     children: [],
     meta: meta$5,
     alias: [],
-    component: () => import('./_type_.07dffcee.mjs')
+    component: () => import('./_type_.dde8c74e.mjs')
   },
   {
     name: "main",
@@ -6145,7 +6153,7 @@ const routes = [
     children: [],
     meta: meta$4,
     alias: [],
-    component: () => import('./index.3276a15b.mjs')
+    component: () => import('./index.35307bc6.mjs')
   },
   {
     name: "news-category",
@@ -6154,7 +6162,7 @@ const routes = [
     children: [],
     meta: meta$3,
     alias: [],
-    component: () => import('./index.276e5248.mjs')
+    component: () => import('./index.4ad87711.mjs')
   },
   {
     name: "news",
@@ -6163,7 +6171,7 @@ const routes = [
     children: [],
     meta: meta$2,
     alias: [],
-    component: () => import('./index.1fb71c69.mjs')
+    component: () => import('./index.6053e87f.mjs')
   },
   {
     name: "pins",
@@ -6172,7 +6180,7 @@ const routes = [
     children: [],
     meta: meta$1,
     alias: [],
-    component: () => import('./index.58458f57.mjs')
+    component: () => import('./index.17a819a5.mjs')
   },
   {
     name: "post-id",
@@ -6181,7 +6189,7 @@ const routes = [
     children: [],
     meta,
     alias: [],
-    component: () => import('./_id_.8f8f7915.mjs')
+    component: () => import('./_id_.9a729551.mjs')
   }
 ];
 const configRouterOptions = {};
@@ -6335,7 +6343,7 @@ const _sfc_main$1 = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.45d99220.mjs'));
+    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.67f01bd3.mjs'));
     const nuxtApp = useNuxtApp();
     nuxtApp.hooks.callHookWith((hooks) => hooks.map((hook) => hook()), "vue:setup");
     const error = useError();
@@ -6367,7 +6375,7 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const layouts = {
-  default: vue_cjs_prod.defineAsyncComponent(() => import('./default.c32e783a.mjs'))
+  default: vue_cjs_prod.defineAsyncComponent(() => import('./default.9fb34f25.mjs'))
 };
 const defaultLayoutTransition = { name: "layout", mode: "out-in" };
 const __nuxt_component_0 = vue_cjs_prod.defineComponent({

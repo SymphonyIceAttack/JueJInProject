@@ -1,0 +1,1 @@
+import{a as e,o as c,b as a}from"./entry-bb9c4d51.mjs";const r={};function n(o,t){return c(),a("div",null," \u6211\u662F\u6CB8\u70B9")}var s=e(r,[["render",n],["__scopeId","data-v-5cb17d64"]]);export{s as default};
