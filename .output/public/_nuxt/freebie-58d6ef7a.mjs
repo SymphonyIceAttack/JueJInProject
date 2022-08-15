@@ -1,1 +1,0 @@
-import{a as e,o as r,b as c}from"./entry-2f67171f.mjs";const a={};function o(t,n){return r(),c("div",null,"\u6211\u662Ffreebie")}var f=e(a,[["render",o],["__scopeId","data-v-7df2dc20"]]);export{f as default};
