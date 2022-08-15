@@ -5260,7 +5260,7 @@ function useWindowScroll({ window: window2 = defaultWindow } = {}) {
   return { x, y };
 }
 async function getAllPostIds() {
-  const postsDirectory = path.join(process.cwd(), "posts");
+  const postsDirectory = "public/posts";
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
@@ -5271,7 +5271,7 @@ async function getAllPostIds() {
   });
 }
 async function getPostData(id) {
-  const postsDirectory = path.join(process.cwd(), "posts");
+  const postsDirectory = "public/posts";
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
@@ -6019,7 +6019,7 @@ const routes = [
     children: [],
     meta: meta$i,
     alias: [],
-    component: () => import('./ai.59aa4c2b.mjs')
+    component: () => import('./ai.b49f9333.mjs')
   },
   {
     name: "course-android",
@@ -6028,7 +6028,7 @@ const routes = [
     children: [],
     meta: meta$h,
     alias: [],
-    component: () => import('./android.a9cf814f.mjs')
+    component: () => import('./android.1bcfed7e.mjs')
   },
   {
     name: "course-article",
@@ -6037,7 +6037,7 @@ const routes = [
     children: [],
     meta: meta$g,
     alias: [],
-    component: () => import('./article.aa4c94f6.mjs')
+    component: () => import('./article.6214f53a.mjs')
   },
   {
     name: "course-backend",
@@ -6046,7 +6046,7 @@ const routes = [
     children: [],
     meta: meta$f,
     alias: [],
-    component: () => import('./backend.7ed73f9c.mjs')
+    component: () => import('./backend.4387e3d2.mjs')
   },
   {
     name: "course-career",
@@ -6055,7 +6055,7 @@ const routes = [
     children: [],
     meta: meta$e,
     alias: [],
-    component: () => import('./career.d6375534.mjs')
+    component: () => import('./career.f07c304e.mjs')
   },
   {
     name: "course-following",
@@ -6064,7 +6064,7 @@ const routes = [
     children: [],
     meta: meta$d,
     alias: [],
-    component: () => import('./following.d2f3ed3a.mjs')
+    component: () => import('./following.4fbae672.mjs')
   },
   {
     name: "course-freebie",
@@ -6073,7 +6073,7 @@ const routes = [
     children: [],
     meta: meta$c,
     alias: [],
-    component: () => import('./freebie.ba92465a.mjs')
+    component: () => import('./freebie.bdcf809a.mjs')
   },
   {
     name: "course-frontend",
@@ -6082,7 +6082,7 @@ const routes = [
     children: [],
     meta: meta$b,
     alias: [],
-    component: () => import('./frontend.fc316216.mjs')
+    component: () => import('./frontend.5e3851ca.mjs')
   },
   {
     name: "course",
@@ -6091,7 +6091,7 @@ const routes = [
     children: [],
     meta: meta$a,
     alias: [],
-    component: () => import('./index.431c9b21.mjs')
+    component: () => import('./index.f29d7932.mjs')
   },
   {
     name: "course-ios",
@@ -6100,7 +6100,7 @@ const routes = [
     children: [],
     meta: meta$9,
     alias: [],
-    component: () => import('./ios.9047ae39.mjs')
+    component: () => import('./ios.e012d20a.mjs')
   },
   {
     name: "events-all",
@@ -6109,7 +6109,7 @@ const routes = [
     children: [],
     meta: meta$8,
     alias: [],
-    component: () => import('./all.b961fb4f.mjs')
+    component: () => import('./all.5ddfd8fb.mjs')
   },
   {
     name: "index",
@@ -6118,7 +6118,7 @@ const routes = [
     children: [],
     meta: meta$7,
     alias: [],
-    component: () => import('./index.b1194f9f.mjs')
+    component: () => import('./index.14ab8daf.mjs')
   },
   {
     name: "live",
@@ -6127,7 +6127,7 @@ const routes = [
     children: [],
     meta: meta$6,
     alias: [],
-    component: () => import('./index.8bd64496.mjs')
+    component: () => import('./index.5c8b0857.mjs')
   },
   {
     name: "main-type",
@@ -6136,7 +6136,7 @@ const routes = [
     children: [],
     meta: meta$5,
     alias: [],
-    component: () => import('./_type_.7de5bf49.mjs')
+    component: () => import('./_type_.190a4bcb.mjs')
   },
   {
     name: "main",
@@ -6145,7 +6145,7 @@ const routes = [
     children: [],
     meta: meta$4,
     alias: [],
-    component: () => import('./index.b901af8f.mjs')
+    component: () => import('./index.92530f82.mjs')
   },
   {
     name: "news-category",
@@ -6154,7 +6154,7 @@ const routes = [
     children: [],
     meta: meta$3,
     alias: [],
-    component: () => import('./index.725df15b.mjs')
+    component: () => import('./index.cbc4bb51.mjs')
   },
   {
     name: "news",
@@ -6163,7 +6163,7 @@ const routes = [
     children: [],
     meta: meta$2,
     alias: [],
-    component: () => import('./index.89cc069c.mjs')
+    component: () => import('./index.4b2370cb.mjs')
   },
   {
     name: "pins",
@@ -6172,7 +6172,7 @@ const routes = [
     children: [],
     meta: meta$1,
     alias: [],
-    component: () => import('./index.2df59534.mjs')
+    component: () => import('./index.d14f6049.mjs')
   },
   {
     name: "post-id",
@@ -6181,7 +6181,7 @@ const routes = [
     children: [],
     meta,
     alias: [],
-    component: () => import('./_id_.77d71b68.mjs')
+    component: () => import('./_id_.58201f0c.mjs')
   }
 ];
 const configRouterOptions = {};
@@ -6335,7 +6335,7 @@ const _sfc_main$1 = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.f41549f4.mjs'));
+    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.1f4cf91e.mjs'));
     const nuxtApp = useNuxtApp();
     nuxtApp.hooks.callHookWith((hooks) => hooks.map((hook) => hook()), "vue:setup");
     const error = useError();
@@ -6367,7 +6367,7 @@ _sfc_main$1.setup = (props, ctx) => {
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
 const layouts = {
-  default: vue_cjs_prod.defineAsyncComponent(() => import('./default.87044ca4.mjs'))
+  default: vue_cjs_prod.defineAsyncComponent(() => import('./default.b25dd9de.mjs'))
 };
 const defaultLayoutTransition = { name: "layout", mode: "out-in" };
 const __nuxt_component_0 = vue_cjs_prod.defineComponent({

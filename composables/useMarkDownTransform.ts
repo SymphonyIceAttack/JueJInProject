@@ -10,7 +10,7 @@ import type { DirectoryItem } from "~~/ProjectTypes/DirectoryTypes";
 import { useDirceortyStore } from "@/Piniastore/DirceortyStore";
 import { useWindowScroll } from "@vueuse/core";
 export async function getSortedPostsData() {
-    const postsDirectory = path.join(process.cwd(), "posts");
+    const postsDirectory = "public/posts";
     const fileNames = fs.readdirSync(postsDirectory);
     const allPostsData = fileNames.map((fileName) => {
         const id = fileName.replace(/\.md$/, "");
@@ -29,7 +29,7 @@ export async function getSortedPostsData() {
 }
 
 export async function getAllPostIds() {
-    const postsDirectory = path.join(process.cwd(), "posts");
+    const postsDirectory = "public/posts";
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map((fileName) => {
         return {
@@ -40,8 +40,7 @@ export async function getAllPostIds() {
     });
 }
 export async function getPostData(id: string) {
-    
-    const postsDirectory = path.join(process.cwd(), "posts");
+    const postsDirectory = "public/posts";
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
