@@ -33,7 +33,7 @@ const dev = process.dev;
     >
         <div class="MainItem">
             <div class="ItemHeader">
-                <a>{{ item.name }}</a>
+                <span class="link">{{ item.name }}</span>
                 <span>{{ item.day.toDateString() }}</span>
                 <div v-for="tag in item.tags" :key="nanoid()" class="tag">{{
                     tag
@@ -79,7 +79,7 @@ const dev = process.dev;
             word-break: break-word;
             height: 22px;
             margin: 1rem 0;
-            a {
+            .link {
                 display: flex;
                 align-items: center;
                 margin-right: 8px;
