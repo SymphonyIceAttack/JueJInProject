@@ -18,6 +18,7 @@ const isFoucsActive = ref(false);
 // 这里之所以包一层，是因为ref传入模版中会自动脱钩，所以传入的值会变为一个单纯的布尔值
 //为什么不直接返回ref，只因为闭包会导致每次调用后都会返回一个新的ref
 const isFoucsActiveWrap = () => isFoucsActive;
+
 </script>
 <!--这里我使用了大量的插槽，是为了避免出现变量传递出现太大的层级深度
 这里我抽离组件的依据是关注点分离，按照层级嵌套关系放置组件的位置固然可以

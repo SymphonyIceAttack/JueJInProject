@@ -4,14 +4,16 @@ import markdownTransform from "@/PagesComponents/post/PostPage/markdownTransform
 const route = useRoute();
 const { data } = await useAsyncData(
     "getPostData",
-    (): Promise<{
+    (
+        NuxtApp
+    ): Promise<{
         id: string;
         contentHtml: string;
     }> => {
+        NuxtApp?.ssrContext?.noSSR === undefined && location.reload();
         return getPostData(route.params.id as string);
     }
 );
-
 </script>
 <template>
     <div class="PostContainer">

@@ -1,1 +1,0 @@
-import{a as e,o,b as c}from"./entry-bb9c4d51.mjs";const a={};function n(r,t){return o(),c("div",null,"\u6211\u662Ffollowing")}var _=e(a,[["render",n],["__scopeId","data-v-4ca2ce9e"]]);export{_ as default};

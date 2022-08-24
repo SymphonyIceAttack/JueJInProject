@@ -16,20 +16,12 @@ const randomRange = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min)) + min;
 };
 const currentPostId = computed(() => randomRange(0, AllPostId.length));
-const dev = process.dev;
 </script>
 <template>
     <NuxtLink
         :style="{ height: height + 'px' }"
         class="ItemBox"
-        :to="
-            !dev
-                ? 'http://www.huancaibingxi.online/' +
-                  'post/' +
-                  AllPostId[currentPostId].params.id
-                : '' + '/post/' + AllPostId[currentPostId].params.id
-        "
-        target="_blank"
+        :to="'/post/' + AllPostId[currentPostId].params.id"
     >
         <div class="MainItem">
             <div class="ItemHeader">
