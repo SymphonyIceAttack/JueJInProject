@@ -28,7 +28,7 @@ const isFoucsActiveWrap = () => isFoucsActive;
         <NavBarContainer>
             <NavBarList />
             <RightSideBar>
-                <SearchAddItem :isHiddenWrap="isFoucsActiveWrap">
+                <SearchAddItem :isHiddenWrap="isFoucsActiveWrap" >
                     <SrearchBox :isFoucsActiveWrap="isFoucsActiveWrap" />
                     <GroupAdd :isHideWarp="isFoucsActiveWrap" />
                 </SearchAddItem>

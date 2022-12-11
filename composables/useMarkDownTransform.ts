@@ -9,7 +9,7 @@ import { nanoid } from "nanoid";
 import type { DirectoryItem } from "~~/ProjectTypes/DirectoryTypes";
 import { useDirceortyStore } from "@/Piniastore/DirceortyStore";
 import { useWindowScroll } from "@vueuse/core";
-export async function getSortedPostsData() {
+export async function getSortedPostsData () {
     const postsDirectory = "public/posts";
     const fileNames = fs.readdirSync(postsDirectory);
     const allPostsData = fileNames.map((fileName) => {
@@ -28,7 +28,7 @@ export async function getSortedPostsData() {
     return allPostsData;
 }
 
-export async function getAllPostIds() {
+export async function getAllPostIds () {
     const postsDirectory = "public/posts";
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map((fileName) => {
@@ -39,7 +39,7 @@ export async function getAllPostIds() {
         };
     });
 }
-export async function getPostData(id: string) {
+export async function getPostData (id: string) {
     const postsDirectory = "public/posts";
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");

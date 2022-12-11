@@ -1,3 +1,5 @@
-declare interface ImportMetaEnv {
+
+
+interface ImportMetaEnv {
     BASE_URL: string;
 }
